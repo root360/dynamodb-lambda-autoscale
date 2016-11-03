@@ -42,7 +42,7 @@ export default class RateLimitedDecrement {
     adjustmentContext: AdjustmentContext) {
 
     // Check if we have already had all the decreases we are allowed today
-    if (data.ProvisionedThroughput.NumberOfDecreasesToday >= 4) {
+    if (data.ProvisionedThroughput.NumberOfDecreasesToday >= 8) {
       return this.getTomorrowDate();
     }
 
