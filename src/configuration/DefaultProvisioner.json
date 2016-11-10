@@ -1,6 +1,6 @@
 {
   "ReadCapacity": {
-    "Min": 200,
+    "Min": 100,
     "Max": 1000,
     "Increment": {
       "When": {
@@ -12,17 +12,17 @@
     },
     "Decrement": {
       "When": {
-        "UtilisationIsBelowPercent": 50,
+        "UtilisationIsBelowPercent": 70,
         "AfterLastIncrementMinutes": 60,
         "AfterLastDecrementMinutes": 60
       },
       "By": {
-        "ProvisionedPercent": 50
+        "ProvisionedPercent": 30
       }
     }
   },
   "WriteCapacity": {
-    "Min": 200,
+    "Min": 10,
     "Max": 500,
     "Increment": {
       "When": {
@@ -34,12 +34,12 @@
     },
     "Decrement": {
       "When": {
-        "UtilisationIsBelowPercent": 30,
+        "UtilisationIsBelowPercent": 70,
         "AfterLastIncrementMinutes": 60,
         "AfterLastDecrementMinutes": 60
       },
       "By": {
-        "ProvisionedPercent": 50
+        "ProvisionedPercent": 30
       }
     }
   }
